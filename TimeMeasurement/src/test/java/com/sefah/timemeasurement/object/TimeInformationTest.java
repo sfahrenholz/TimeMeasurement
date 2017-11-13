@@ -1,4 +1,4 @@
-package com.sefah.timemeasurement;
+package com.sefah.timemeasurement.object;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
+
+import com.sefah.timemeasurement.object.TimeInformation;
 
 public class TimeInformationTest {
 	

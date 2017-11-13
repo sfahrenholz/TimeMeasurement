@@ -1,4 +1,4 @@
-package com.sefah.timemeasurement;
+package com.sefah.timemeasurement.object;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,12 +16,13 @@ public class TimeDurationInformation {
 	private long creationTime;
 	private long lastUsedTime;
 
-	TimeDurationInformation(final int markOutdatedAfterDays) {
+	public TimeDurationInformation(final int markOutdatedAfterDays) {
 		this.creationTime = System.nanoTime();
 		this.outdatedAfterDays = markOutdatedAfterDays;
 	}
 
 	public void start(final String idValue) {
+
 		if (!instanceMap.containsKey(idValue)) {
 			final TimeInformation timeInformation = new TimeInformation();
 			timeInformation.start();
@@ -71,9 +72,11 @@ public class TimeDurationInformation {
 
 	private String pad(final String str) {
 		final StringBuilder padded = new StringBuilder(str);
+
 		while (padded.length() < maxIDValueLength) {
 			padded.append(' ');
 		}
+
 		return padded.toString();
 	}
 

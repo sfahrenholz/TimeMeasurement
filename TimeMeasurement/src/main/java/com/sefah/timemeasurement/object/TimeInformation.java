@@ -1,4 +1,4 @@
-package com.sefah.timemeasurement;
+package com.sefah.timemeasurement.object;
 
 import java.util.concurrent.TimeUnit;
 
